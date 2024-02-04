@@ -1,5 +1,10 @@
 :root{
     --index-bg: #ff3838;
+    --main-clr: #2C3E50;
+    --add-clr: #ECF0F1;
+    --foc-clr: #E74C3C;
+    --focused-clr : #b33628;
+    --first-font-color: #C0C0C0;
 }
 *{
     box-sizing: border-box;
