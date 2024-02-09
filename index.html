@@ -170,7 +170,25 @@
         </div>
     </div>
 
-    
+    <div class="addContentButtonDiv">
+        <button class="addContentButton" onclick="openAddContentMenu"></button>
+    </div>
+    <div class="addContentMenu invisible">
+        <input type="text" id="field1" class="field" placeholder="Комментарий">
+        <input type="text" id="field2" class="field" placeholder="Описание (хештеги)">
+        <input type="text" id="field3" class="field" placeholder="url">
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-top: 15px; gap: 5px;">
+            <input type="radio" id="contactChoice1" name="contact" value="email" />
+            <label for="contactChoice1">PNG</label>
+            <input type="radio" id="contactChoice2" name="contact" value="phone" />
+            <label for="contactChoice2">GIF</label>
+            <input type="radio" id="contactChoice3" name="contact" value="mail" />
+            <label for="contactChoice3">Video</label>
+        </div>
+        <button class ="menuSaveButton" onclick="saveToLocalStorage()">Save</button>
+    </div>
+
     <script src="scripts/popup-menu.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

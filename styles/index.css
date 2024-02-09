@@ -75,3 +75,64 @@
     width: 15px;
     height: 15px;
 }
+.addContentButtonDiv{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    border: 1px solid var(--first-font-color);
+    background-color: var(--main-clr);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.addContentButton{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-clr);
+    transition: all linear 0.2s;
+    z-index: 1;
+}
+.addContentButton:hover{
+    background-color: var(--foc-clr);
+}
+.addContentMenu{
+    width: 250px;
+    height: 300px;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    border: 2px solid var(--main-clr);
+    border-radius: 25px;
+    z-index: 0;
+    background-color: var(--first-font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-top: 25px;
+}
+.invisible{
+    visibility: hidden;
+}
+.field{
+    width: 85%;
+    border: 3px solid var(--add-clr);
+    border-radius: 5px;
+    padding-left: 2px;
+    font-size: 15px;
+    height: auto;
+}
+.menuSaveButton{
+    width: 90%;
+    height: 10%;
+    position: absolute;
+    bottom: 50px;
+}
