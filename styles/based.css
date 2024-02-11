@@ -5,6 +5,7 @@
     --foc-clr: #E74C3C;
     --focused-clr : #b33628;
     --first-font-color: #C0C0C0;
+    --white-clr: #ffffff;
 }
 *{
     box-sizing: border-box;

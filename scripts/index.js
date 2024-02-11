@@ -12,24 +12,52 @@
     button.addEventListener('click', openAddContentMenu);
 
     document.addEventListener('click', (event) => {
-        const menu = document.querySelector('.addContentMenu'); // Замените '.your-menu-class' на ваш класс меню
-        const button = document.querySelector('.addContentButton'); // Замените '.your-button-class' на ваш класс кнопки
+        const menu = document.querySelector('.addContentMenu');
+        const button = document.querySelector('.addContentButton');
     
         if (!menu.contains(event.target) && !button.contains(event.target)) {
-            menu.classList.add('invisible'); // Добавляем класс "invisible"
+            menu.classList.add('invisible');
         }
     });
     
-    function saveToLocalStorage(){
-            const field1Value = document.getElementById('field1').value;
-            const field2Value = document.getElementById('field2').value;
-            const field3Value = document.getElementById('field3').value;
-
-            localStorage.setItem('field1', field1Value);
-            localStorage.setItem('field2', field2Value);
-            localStorage.setItem('field3', field3Value);
-
-            alert('Values saved to localStorage!');
-    }
-
+    function saveToLocalStorage() {
+        const commentValue = document.getElementById('field1').value;
+        const urlValue = document.getElementById('field2').value;
+        const formatRadios = document.querySelectorAll('input[name="contact"]');
+        let selectedFormat;
     
+        formatRadios.forEach(radio => {
+            if (radio.checked) {
+                selectedFormat = radio.value;
+            }
+        });
+    
+        const data = `${commentValue}|${urlValue}|${selectedFormat}`;
+        localStorage.setItem('userFormData', data);
+        console.log('Значения сохранены в локальное хранилище!');
+    
+        // Вызываем функцию для добавления нового блока и передаем ей параметры
+        addNewBlock(commentValue, urlValue, formatRadios);
+    }
+    
+    function addNewBlock(comment, url, format) {
+        const newBlock = document.createElement('div');
+        newBlock.className = 'feed-block';
+    
+        newBlock.innerHTML = `
+            <div class="feed-etc"> 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLXB2ytNJYEaaLXWJCQLZgj9Q1MdqrxBwrRQ&usqp=CAU" alt="" class="user-avatar"> 
+                <span class="user-name">nickname</span> 
+            </div>
+            <div class="feed-comment"> 
+                <span class="feed-comment-text">${comment}</span>
+            </div>
+            <div class="feed-img">
+                <img src="${url}" alt="${format}">
+            </div>
+        `;
+    
+        const container = document.querySelector('.feed-container'); 
+    
+        container.appendChild(newBlock);
+    }
