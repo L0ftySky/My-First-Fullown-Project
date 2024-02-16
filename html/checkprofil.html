@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Your Profile</title>
     <link rel="stylesheet" href="../styles/based.css">
     <link rel="stylesheet" href="../styles/menu-styles.css">
     <link rel="stylesheet" href="../styles/profil.css">
@@ -25,29 +25,24 @@
     </div>
 
     <div class="profil-container">
-        <div class="reg-form">
-            <label class="reg-form-label" for="firstName">Имя:</label>
-            <input class="reg-form-input" type="text" id="firstName" name="firstName"><br>
-
-            <label class="reg-form-label" for="lastName">Фамилия:</label>
-            <input class="reg-form-input" type="text" id="lastName" name="lastName"><br>
-
-            <label class="reg-form-label" for="email">Электронная почта:</label>
-            <input class="reg-form-input" type="email" id="email" name="email"><br>
-
-            <label class="reg-form-label" for="nickname">Никнейм:</label>
-            <input class="reg-form-input" type="text" id="nickname" name="nickname" required><br>
-    
-            <label class="reg-form-label" for="avatar">Ссылка на аватар:</label>
-            <input class="reg-form-input" type="url" id="avatar" name="avatar" onblur="validateAvatarUrl()"><br>
-            <span id="avatar-error" class="error-message"></span>
-
-            <button class = "reg-form-button" type="submit" onclick="saveUserData()">Зарегистрироваться</button>
+        <div class="registered-form">
+            <div class="rows-cont">
+                <div class="data-row">
+                    <label for="nickname">Ваш никнейм:</label><br>
+                    <span id="nickname"></span>
+                </div>
+                <div class="data-row">
+                    <label for="avatar">URL вашего аватара:</label><br>
+                    <div id ="avatar" class="image-div"></div>
+                </div>
             </div>
+            
+        </div>
     </div>
 
 
     <script src="../scripts/popup-menu.js"></script>
-    <script src="../scripts/reg-form.js"></script>
+    <script src="../scripts/loadinfo.js"></script>
+
 </body>
 </html>

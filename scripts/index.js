@@ -40,14 +40,14 @@
         addNewBlock(commentValue, urlValue, formatRadios);
     }
     
-    function addNewBlock(comment, url, format) {
+    function addNewBlock(comment, url, format, nickname, url) {
         const newBlock = document.createElement('div');
         newBlock.className = 'feed-block';
     
         newBlock.innerHTML = `
             <div class="feed-etc"> 
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLXB2ytNJYEaaLXWJCQLZgj9Q1MdqrxBwrRQ&usqp=CAU" alt="" class="user-avatar"> 
-                <span class="user-name">nickname</span> 
+                <img src="${url}" alt="" class="user-avatar"> 
+                <span class="user-name">${nickname}</span> 
             </div>
             <div class="feed-comment"> 
                 <span class="feed-comment-text">${comment}</span>
