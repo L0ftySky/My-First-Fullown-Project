@@ -1,0 +1,34 @@
+.settings-container{
+    position: relative;
+    background-color: var(--add-clr);
+    width: 60%;
+    height: 100vh;
+    left: 20%;
+    border: 1px solid var(--first-font-color);
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    padding: 30px;
+    padding-top: 80px;
+    gap: 30px;
+}
+.set-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    background: var(--white-clr);
+    border: 2px solid var(--first-font-color);
+    border-radius: 25px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}

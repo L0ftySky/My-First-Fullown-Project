@@ -6,3 +6,21 @@ function openMenu(){
       menuclass.classList.add("popped");
     }
   }
+function ProfilCheckFromIndex(){
+  if (localStorage.getItem('userNickname')) {
+    window.location.href = 'html/checkprofil.html';
+    console.log('Инфа есть!');
+  } else {
+    window.location.href = 'html/profil.html';
+    console.log('Инфы нет!');
+}
+}
+function ProfilCheckFromOtherHTML(){
+  if (localStorage.getItem('userNickname')) {
+    window.location.href = '../html/checkprofil.html';
+    console.log('Инфа есть!');
+  } else {
+    window.location.href = '../html/profil.html';
+    console.log('Инфы нет!');
+}
+}
