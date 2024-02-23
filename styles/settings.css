@@ -22,13 +22,66 @@
     justify-content: flex-start;
     align-items: center;
     width: 50%;
-    height: 70%;
+    height: 60%;
     background: var(--white-clr);
     border: 2px solid var(--first-font-color);
     border-radius: 25px;
 }
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+}
+.inputs input{
+    margin-bottom: 3px;
+    border: 2px solid var(--main-clr);
+    padding: 2px;
+    padding-left: 3px;
+}
+.inputs label{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-.dark-mode {
-    background-color: black;
-    color: white;
+}
+.inputs label:last-of-type{
+    margin-bottom: 5px;
+}
+.acceptChangesButton{
+    width: 50%;
+    height: 9%;
+    border: 2px solid var(--first-font-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    background: var(--main-clr);
+    color: var(--white-clr);
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: all linear 0.20s;
+}
+.acceptChangesButton:hover{
+    background-color: var(--darker-main-clr);
+}
+.PSspan{
+    margin-bottom: 25px;
+    color: var(--first-font-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+}
+.additionButtons{
+    width: 100%;
+    height: 20%;
+}
+.deleteInfoButton{
+    width: 45%;
+    height: 50%;
+    background: var(--foc-clr);
+    border: 2px solid var(--main-clr);
+    color: var(--white-clr);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all linear 0.20s;
+}
+.deleteInfoButton:hover{
+    background-color: var(--focused-clr);
 }

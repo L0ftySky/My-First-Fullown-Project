@@ -27,19 +27,34 @@
     <div class="settings-container">
         <div class="set-form">
             <h1 class="settings-font">Настройки</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <div class="inputs">
+                
+                <label for="input1">Изменить никнейм:</label>
+                <input type="text" id="input1" name="input1" class="NewNick"><br>
+                
+                <label for="input2">Изменить аватар(url)    :</label>
+                <input type="text" id="input2" name="input2" class="NewAvaUrl"><br>
 
-            <h3>Скоро будут....</h3>
-            <h6>...пока что</h6>
+                <span class="PSspan">P.S. Если не хотите ничего менять - оставьте поле пустым</span>
+
+                <button class="acceptChangesButton" onclick="acceptChanges()">Изменить</button>
+
+
+                <hr>
+
+
+                <label for="input3">Доп. действия:</label>
+                <div class="additionButtons">
+                    <button class="deleteInfoButton" onclick="clearLocalStorage()">Удалить аккаунт</button>
+                </div>
+                <br>
+            </div>
     </div>
     </div>
 
     
     <script src="../scripts/popup-menu.js"></script>
+    <script src="../scripts/settings.js"></script>
     <script></script>
 </body>
 </html>

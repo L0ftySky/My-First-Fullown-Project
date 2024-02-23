@@ -40,14 +40,20 @@
         addNewBlock(commentValue, urlValue, formatRadios);
     }
     
-    function addNewBlock(comment, url, format, nickname, url) {
+    function addNewBlock(comment, url, format) {
+        let userAvatarUrl = localStorage.getItem('userAvatarUrl');
+        let userNickname = localStorage.getItem('userNickname');
+
+        console.log(userAvatarUrl);
+        console.log(userNickname);
+
         const newBlock = document.createElement('div');
         newBlock.className = 'feed-block';
     
         newBlock.innerHTML = `
             <div class="feed-etc"> 
-                <img src="${url}" alt="" class="user-avatar"> 
-                <span class="user-name">${nickname}</span> 
+                <img src="${userAvatarUrl}" alt="" class="user-avatar"> 
+                <span class="user-name">${userNickname}</span> 
             </div>
             <div class="feed-comment"> 
                 <span class="feed-comment-text">${comment}</span>
@@ -56,7 +62,7 @@
                 <img src="${url}" alt="${format}">
             </div>
         `;
-    
+        
         const container = document.querySelector('.feed-container'); 
     
         container.appendChild(newBlock);

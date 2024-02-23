@@ -38,8 +38,8 @@ function saveUserData() {
     document.getElementById('nickname').value = '';
     document.getElementById('avatar').value = '';
 
-    alert(`Регистрация успешно завершена, добро пожаловать, ${nickname}`);
+    console.log(`Регистрация успешно завершена, добро пожаловать, ${nickname}`);
 
-    window.open('../html/checkprofil.html');
+    window.location.href = '../html/checkprofil.html';
 
 }
