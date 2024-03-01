@@ -24,20 +24,45 @@
         const commentValue = document.getElementById('field1').value;
         const urlValue = document.getElementById('field2').value;
         const formatRadios = document.querySelectorAll('input[name="contact"]');
-        let selectedFormat;
+
+        const commentField = document.getElementById('field1');
+        const urlField = document.getElementById('field2');
+
+        const userNickname = localStorage.getItem("userNickname");
+        const userUrlAvatar = localStorage.getItem("userAvatarUrl");
+        
+        if (userNickname && userUrlAvatar) {
+            
+            console.log(`Данные найдены в локальном хранилище:\nНикнейм: ${userNickname}\nАватар: ${userUrlAvatar}`);
+            let selectedFormat;
     
-        formatRadios.forEach(radio => {
-            if (radio.checked) {
-                selectedFormat = radio.value;
+            if (commentField.value && urlField.value) {
+                console.log('Оба поля заполнены');
+
+                if (!urlField.value.match(/\.(jpg|jpeg|png|gif)$/i)) {
+                    alert('Вы вставили ссылку на что-то иное, а не картинку')
+                } else {
+                    formatRadios.forEach(radio => {
+                        if (radio.checked) {
+                            selectedFormat = radio.value;
+                        }
+                    });
+            
+                    const data = `${commentValue}|${urlValue}|${selectedFormat}`;
+                    localStorage.setItem('userFormData', data);
+                    console.log('Значения сохранены в локальное хранилище!');
+            
+                    addNewBlock(commentValue, urlValue, formatRadios);
+                }
+                
+            } else {
+                alert('Одно из полей не заполнено.');
             }
-        });
-    
-        const data = `${commentValue}|${urlValue}|${selectedFormat}`;
-        localStorage.setItem('userFormData', data);
-        console.log('Значения сохранены в локальное хранилище!');
-    
-        // Вызываем функцию для добавления нового блока и передаем ей параметры
-        addNewBlock(commentValue, urlValue, formatRadios);
+
+        }else{
+            alert("Вам необходимо зарегистрироваться для загрузки контента!")
+        }
+        
     }
     
     function addNewBlock(comment, url, format) {
