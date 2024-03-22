@@ -1,3 +1,10 @@
+.logo-img{
+    width: 150px;
+}
+.logo-img img{
+    width: 150px;
+}
+
 .feed-container{
     position: relative;
     background-color: var(--add-clr);
