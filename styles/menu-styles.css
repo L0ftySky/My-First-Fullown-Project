@@ -99,9 +99,18 @@
     right: 5px;
     cursor: pointer;
     transition: all 0.20s linear;
-    border: 1px solid var(--add-clr);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .popup-menu-button:hover{
-    background-color: var(--focused-clr);
+    background-color: var(--darker-main-clr);
+}
+
+.popup-menu-button img{
+    width: 75px;
 }

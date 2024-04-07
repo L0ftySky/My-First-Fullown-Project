@@ -122,6 +122,9 @@
 .addContentButton:hover{
     background-color: var(--foc-clr);
 }
+.addContentButton img{
+    width: 45px;
+}
 .addContentMenu{
     width: 250px;
     height: 300px;

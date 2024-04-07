@@ -4,10 +4,10 @@ function openMenu(){
     const menuImage = document.querySelector('.menuImage');
 
     if (menuclass.classList.contains("popped")) {
-      menuImage.src = 'images/safe-opened.png';
+      menuImage.src = '../images/safe-opened.png';
       menuclass.classList.remove("popped");
     } else {
-      menuImage.src = 'images/safe-closed.png';
+      menuImage.src = '../images/safe-closed.png';
       menuclass.classList.add("popped");
     }
 }
