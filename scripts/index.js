@@ -51,8 +51,9 @@
                     const data = `${commentValue}|${urlValue}|${selectedFormat}`;
                     localStorage.setItem('userFormData', data);
                     console.log('Значения сохранены в локальное хранилище!');
-            
                     addNewBlock(commentValue, urlValue, formatRadios);
+                    commentField.value = '';
+                    urlField.value = '';
                 }
                 
             } else {
